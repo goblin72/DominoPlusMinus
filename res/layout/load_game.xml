@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/back"
+            android:width="150dp"
+            android:id="@+id/back" android:onClick="back"/>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/load_game_header"
+            android:background="@color/gray">
+        <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/start_date" android:minWidth="200px" android:maxWidth="200px"/>
+        <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/number_of_rounds" android:minWidth="300px" android:maxWidth="300px"/>
+        <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/players" android:minWidth="500px" android:maxWidth="500px"/>
+    </LinearLayout>
+    <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollView"
+            android:minHeight="300dp">
+        <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="1"
+                android:id="@+id/load_games"
+                >
+
+
+        </GridLayout>
+    </ScrollView>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/delete_game"
+                android:id="@+id/delete_game"
+                android:width="200dp"
+                android:onClick="deleteGame"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/load_game"
+                android:id="@+id/load_game"
+                android:width="200dp"
+                android:onClick="loadGame"/>
+    </LinearLayout>
+
+
+</LinearLayout>

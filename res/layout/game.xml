@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout    xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent" android:columnCount="2" android:rowCount="5">
+
+    <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_menu"
+            android:id="@+id/menu" android:onClick="menu"/>
+    <GridLayout    xmlns:android="http://schemas.android.com/apk/res/android"
+                   android:orientation="horizontal"
+                   android:layout_gravity="start|top"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_rowSpan="1"
+                   android:layout_margin="10dp"
+                   android:columnWidth="90dp"
+                   android:gravity="center"
+                   android:horizontalSpacing="10dp"
+                   android:numColumns="auto_fit"
+                   android:stretchMode="columnWidth"
+                   android:verticalSpacing="10dp"
+                   android:id="@+id/rounds_header">
+    </GridLayout>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_height="800dp"
+                android:layout_rowSpan="2"
+                android:id="@+id/scrolledRounds"
+            >
+
+        <GridLayout    xmlns:android="http://schemas.android.com/apk/res/android"
+                       android:orientation="horizontal"
+                       android:layout_gravity="start|top"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_margin="10dp"
+                       android:columnWidth="90dp"
+                       android:gravity="center"
+                       android:horizontalSpacing="10dp"
+                       android:numColumns="auto_fit"
+                       android:stretchMode="columnWidth"
+                       android:verticalSpacing="10dp"
+                       android:keepScreenOn="true"
+                       android:id="@+id/rounds">
+        </GridLayout>
+    </ScrollView>
+
+    <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/zero"
+            android:textSize="150dp"
+            android:id="@+id/change_sign" android:onClick="changeSign" android:background="@color/blue"
+            android:minHeight="270dp" android:maxHeight="170dp"
+            android:gravity="center" android:layout_gravity="right" android:layout_columnSpan="2"/>
+
+    <TextClock
+            android:id="@+id/textClock" android:layout_gravity="right" android:onClick="changeSign"
+            android:textColor="@color/green" android:textSize="40sp" android:textStyle="bold"/>
+
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/end_round"
+            android:id="@+id/end_round" android:minWidth="170dp" android:maxWidth="170dp" android:minHeight="250dp" android:maxHeight="250dp"  android:layout_gravity="right"  android:onClick="endRound"
+            android:layout_marginTop="50dp" android:layout_rowSpan="3"/>
+
+    <!--<Button-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/save_game"-->
+            <!--android:id="@+id/save_game"  android:layout_marginTop="10dp" android:minWidth="170dp" android:maxWidth="170dp" android:layout_gravity="right"  android:onClick="saveGame"/>-->
+
+
+
+</GridLayout>

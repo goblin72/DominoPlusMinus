@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+             android:gravity="top" android:id="@+id/menu">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:gravity="right"
+            android:minWidth="300dp" android:layout_gravity="right">
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/help"
+                android:id="@+id/help" android:textSize="20dp" android:minHeight="50dp" android:minWidth="150dp"
+                android:onClick="help"/>
+        <Button
+                android:layout_width="147dp"
+                android:layout_height="71dp"
+                android:text=""
+                android:id="@+id/language" android:minWidth="150dp" android:minHeight="50dp"
+                android:background="@drawable/english" android:maxWidth="150dp" android:maxHeight="50dp"
+                android:onClick="changeLanguageToEnglish"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" android:gravity="center_vertical|center_horizontal">
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/new_game"
+                android:id="@+id/new_game" android:textSize="24dp" android:minWidth="200dp" android:maxWidth="200dp"
+                android:minHeight="50dp" android:maxHeight="50dp" android:onClick="newGame"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/load_game"
+                android:id="@+id/load_game"
+                android:textSize="24dp" android:minWidth="200dp" android:maxWidth="200dp"
+                android:minHeight="50dp" android:maxHeight="50dp" android:enabled="true" android:onClick="loadGame"/>
+    </LinearLayout>
+
+</LinearLayout>
+

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/back"
+            android:id="@+id/back" android:onClick="back"/>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:gravity="left">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent" android:id="@+id/playerList">
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:text="@string/player1"
+                    android:selectAllOnFocus="true"
+                    android:ems="10"
+                    android:id="@+id/playerName1" android:maxLength="10"/>
+            <EditText android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:inputType="text" android:text="@string/player2" android:ems="10"
+                      android:selectAllOnFocus="true"
+                      android:id="@+id/playerName2" android:maxLength="10"/>
+            <EditText android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:inputType="text" android:text="@string/player3" android:ems="10"
+                      android:selectAllOnFocus="true"
+                      android:id="@+id/playerName3" android:maxLength="10" android:visibility="invisible"/>
+            <EditText android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:inputType="text" android:text="@string/player4" android:ems="10"
+                      android:selectAllOnFocus="true"
+                      android:id="@+id/playerName4" android:maxLength="10" android:visibility="invisible"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/start_game"
+                    android:id="@+id/startGame" android:layout_gravity="center_horizontal" android:onClick="start"
+                    android:minWidth="180dp" android:maxWidth="180dp"/>
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/add_player"
+                    android:id="@+id/newPlayer" android:layout_gravity="center_horizontal" android:onClick="addPlayer"
+                    android:maxWidth="180dp" android:minWidth="180dp"/>
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/remove_player"
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/deletePlayer" android:onClick="deletePlayer" android:minWidth="180dp"
+                    android:maxWidth="180dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
